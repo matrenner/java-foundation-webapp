@@ -1,0 +1,51 @@
+<!doctype html>
+<html class="no-js" lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <link rel="stylesheet" href="css/foundation.css">
+    <link rel="stylesheet" href="css/app.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="form-container">
+    <form action="register" method="post" id="postRegistrationData">
+        <div class="form-icons">
+            <h4>Register for an account</h4>
+            <p id="loginErrorText" style="color:red;display:none;">username or email already exists</p>
+            <div class="input-group">
+      <span class="input-group-label">
+        <i class="fa fa-user"></i>
+      </span>
+                <input id="username" name="username" class="input-group-field" type="text" placeholder="username" maxlength="16" required>
+            </div>
+
+            <div class="input-group">
+      <span class="input-group-label">
+        <i class="fa fa-envelope"></i>
+      </span>
+                <input id="email" name="email" class="input-group-field" type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" maxlength="255" placeholder="email" required>
+            </div>
+
+            <div class="input-group">
+      <span class="input-group-label">
+        <i class="fa fa-key"></i>
+      </span>
+                <input id="password" name="password" class="input-group-field" type="password" pattern=".{6,}" maxlength="60" placeholder="password" required>
+            </div>
+        </div>
+
+        <button class="button expanded">Sign Up</button>
+    </form>
+    <a href="/PlaygroundApp/index.html">Already have an account?</a>
+</div>
+<script src="js/vendor/jquery.js"></script>
+<script src="js/vendor/what-input.js"></script>
+<script src="js/vendor/foundation.js"></script>
+<script src="js/register.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,43 @@
+<!doctype html>
+<html class="no-js" lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign In</title>
+  <link rel="stylesheet" href="css/foundation.css">
+  <link rel="stylesheet" href="css/app.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="form-container">
+
+  <form action="login" method="post" id="postLoginData">
+    <div class="form-icons">
+      <h4>Sign into account</h4>
+        <p id="loginErrorText" style="color:red;display:none;">username/password combination does not exist</p>
+      <div class="input-group">
+      <span class="input-group-label">
+        <i class="fa fa-user"></i>
+      </span>
+        <input id="usernameOrEmail" name="usernameOrEmail" class="input-group-field" type="text" placeholder="username or email" maxlength="255" required>
+      </div>
+      <div class="input-group">
+      <span class="input-group-label">
+        <i class="fa fa-key"></i>
+      </span>
+        <input id="password" name="password" class="input-group-field" type="password" placeholder="password" maxlength="60" required>
+      </div>
+    </div>
+
+    <button class="button expanded">Sign In</button>
+  </form>
+  <a href="/PlaygroundApp/registration.html">Need to register?</a>
+</div>
+<script src="js/vendor/jquery.js"></script>
+<script src="js/vendor/what-input.js"></script>
+<script src="js/vendor/foundation.js"></script>
+<script src="js/login.js"></script>
+</body>
+</html>
