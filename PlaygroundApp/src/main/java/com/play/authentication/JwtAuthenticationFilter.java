@@ -75,6 +75,7 @@ public class JwtAuthenticationFilter implements Filter {
                 if (StringUtils.equals(tokenStatus, TokenHandler.getValidStatus())) {
                     Cookie authCookie = new Cookie("authToken", TokenHandler.refreshToken(jwt));
                     authCookie.setMaxAge((int) TokenHandler.SESSION_TIMEOUT);
+                    authCookie.setSecure(true);
                     httpResponse.addCookie(authCookie);
                     filterChain.doFilter(httpRequest, httpResponse);
                 } else {
