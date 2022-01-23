@@ -93,6 +93,7 @@ public class PlaygroundLoginServlet extends HttpServlet {
 
             Cookie authCookie = new Cookie("authToken", user.getToken());
             authCookie.setMaxAge((int) TokenHandler.SESSION_TIMEOUT);
+            authCookie.setSecure(true);
             response.addCookie(authCookie);
         } else {
             user.setValid(false);
